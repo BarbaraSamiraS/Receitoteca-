@@ -222,4 +222,8 @@
         height: 25px;
         font-size: 13px;
     }
+
+    .home .texto h1{
+        font-size: 40px;
+    }
 }
