@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/inicial/home.css"> 
     <link rel="stylesheet" href="./css/inicial/receita.css">
     <link rel="stylesheet" href="./css/inicial/servicos.css">
+    <link rel="stylesheet" href="./css/inicial/customizacao.css">
 </head>
 <body>
     <div class="navbar">
@@ -51,10 +52,10 @@
                 <img class="imgComida" src="./img/inicial/imgHome.png" alt="">
                 <h3>Fejoada</h3>
                 <div class="categ">PRATOS</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
                 <div class="botoes">
-                    <button class="btnReceita">Receita</button>
-                    <button class="btnCoracao"><i class="fa-solid fa-heart"></i></button>
+                    <button class="btnReceita" id="btnVermelho">Receita</button>
+                    <button class="btnCoracao" id="btnVermelho"><i class="fa-solid fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
@@ -63,8 +64,8 @@
                 <div class="categ">PRATOS</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
                 <div class="botoes">
-                    <button class="btnReceita">Receita</button>
-                    <button class="btnCoracao"><i class="fa-solid fa-heart"></i></button>
+                    <button class="btnReceita" id="btnVerde">Receita</button>
+                    <button class="btnCoracao" id="btnVerde"><i class="fa-solid fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
@@ -73,14 +74,14 @@
                 <div class="categ">PRATOS</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
                 <div class="botoes">
-                    <button class="btnReceita">Receita</button>
-                    <button class="btnCoracao"><i class="fa-solid fa-heart"></i></button>
+                    <button class="btnReceita" id="btnAmarelo">Receita</button>
+                    <button class="btnCoracao" id="btnAmarelo"><i class="fa-solid fa-heart"></i></button>
                 </div>
             </div>
         </div>
         <div class="tranparent" id="baixo"></div>
     </div>
-    <div class="servicos">
+    <div class="servicos" id="servicos">
         <img id="cimaFundoAmarelo" src="./img/inicial/baixoFundoAmarelo.png" alt="">
         <h2 class="titulo">Serviços</h2>
         <div class="conteudo">
@@ -95,9 +96,51 @@
                     <button id="verde"><i class="fas fa-save"></i><p>Salvar</p></button>
                     <button id="vermelho"><i class="fas fa-share-alt"></i><p>Compartilhar</p></button>
                 </div>
-            </div>        
+            </div>   
+        </div>  
+        <img id="baixoFundoAmarelo" src="./img/inicial/cimaFundoAmarelo.png" alt="">   
     </div>
-    <img id="baixoFundoAmarelo" src="./img/inicial/cimaFundoAmarelo.png" alt="">
+    <div class="customizacao">
+        <h2>Customização</h2>
+        <div class="conteudo">
+            <div class="imagem">
+                <img id="fundoCozinha" src="./img/inicial/fundoCozinha.png" alt="">
+                <div class="caixaBranca"></div>
+                <img id="imgCartas" src="./img/inicial/imgCartas.png" alt="">
+            </div>
+            <div class="texto">
+                <div class="box">
+                    <div id="numeracao1" class="numeracao">1</div>
+                    <div class="textoBox">
+                        <h3>Texto da Receita 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="numeracao2" class="numeracao">2</div>
+                    <div class="textoBox">
+                        <h3>Texto da Receita 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="numeracao3" class="numeracao">3</div>
+                    <div class="textoBox">
+                        <h3>Texto da Receita 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="categorias">
+        <h2>Categorias</h2>
+        <div class="listaCategorias">
+            <div class="categoria">Categoria 1</div>
+            <div class="categoria">Categoria 2</div>
+            <div class="categoria">Categoria 3</div>
+        </div>
+    </div>
 </body>
 </html>
 

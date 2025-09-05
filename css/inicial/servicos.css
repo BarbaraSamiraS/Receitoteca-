@@ -2,8 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
     position: relative;
+}
+
+#cimaFundoAmarelo {
+    width: 100%;
+}
+
+#baixoFundoAmarelo {
+    width: 100%;
 }
 
 .servicos .conteudo{
@@ -38,6 +45,7 @@
 .servicos .conteudo .imagem img{
     width: 100%;
     height: 100%;
+    border-radius: 60px;
 }
 
 .servicos .conteudo .texto{
