@@ -1,0 +1,85 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+    background: linear-gradient(180deg, #FFD796 0%, #CE8B1F 95%, #CE8B1F 100%);
+}
+
+footer .imagensFooter{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 90px;
+}
+footer .imagensFooter #comidasFooter{
+    z-index: 0;
+    width: 100%;
+}
+
+footer .imagensFooter #fundoAmareloFooter{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+}
+footer .conteudo{
+    background: linear-gradient(90deg, #FEEB64 13%,#FDD55B 35%, #FDDC5F 46%, #FBCB60 58%, #F7AE67 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+footer .conteudo .sobre{
+    width: 40%;
+}
+
+footer .conteudo .links, footer .conteudo .orientadores, footer .conteudo .contato{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+
+}
+
+footer .conteudo h3{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+footer .conteudo p, footer .conteudo a{
+    font-family: 'Inter', sans-serif;
+    margin: 5px 0;
+    color: #000000;
+    text-decoration: none;
+}
+
+footer .conteudo .sobre img{
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+}
+
+@media (max-width: 750px) {
+    footer .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .conteudo .sobre {
+        width: 100%;
+        text-align: center;
+    }
+    footer .conteudo .links, footer .conteudo .orientadores, footer .conteudo .contato {
+        align-items: center;
+    }
+    footer .conteudo .sobre img{
+        position: static;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}

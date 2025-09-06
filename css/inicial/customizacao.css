@@ -129,9 +129,32 @@
 }
 
 
+@media (max-width: 1120px) {
+    .customizacao .conteudo .imagem {
+        width: 45%;
+    }
+    .customizacao .conteudo .texto {
+        width: 40%;
+        margin-left: 10%;
+    }
+    .customizacao .conteudo #fundoCozinha {
+        margin-right: 20%;
+    }
+}
 
 @media (max-width: 750px) {
+    .customizacao{
+        height: auto;
+        padding: 20px 0;
+    }
     .customizacao .conteudo {
         flex-direction: column;
+    }
+    .customizacao .conteudo .texto {
+        width: 90%;
+        height: auto;
+        gap: 20px;
+        margin-top: 20px;
+         margin-left: 0;
     }
 }

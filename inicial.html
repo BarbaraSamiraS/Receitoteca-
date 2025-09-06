@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/inicial/receita.css">
     <link rel="stylesheet" href="./css/inicial/servicos.css">
     <link rel="stylesheet" href="./css/inicial/customizacao.css">
+    <link rel="stylesheet" href="./css/inicial/categorias.css">
+    <link rel="stylesheet" href="./css/inicial/footer.css">
 </head>
 <body>
     <div class="navbar">
@@ -21,17 +23,17 @@
             <a href="#receitas">Receitas</a>
             <a href="#servicos">Serviços</a>
             <a href="#customizacao">Customização</a>
-            <a href="#categoria">Categoria</a>
+            <a href="#categorias">Categoria</a>
         </nav>
-        <button>Entrar</button>
+        <a href="login.html"><button>Entrar</button></a>
     </div>
-    <div class="home">
+    <div class="home" id="home">
         <div class="texto">
             <h1>Receito<span>teca</span></h1>
             <h3>Seu livro de receitas digital</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
             <div class="botao">
-                <button>Explorar Mais!!</button>
+                <a href="login.html"><button>Explorar Mais!!</button></a>
             </div>
         </div>
         <div class="imagem">
@@ -100,7 +102,7 @@
         </div>  
         <img id="baixoFundoAmarelo" src="./img/inicial/cimaFundoAmarelo.png" alt="">   
     </div>
-    <div class="customizacao">
+    <div class="customizacao" id="customizacao">
         <h2>Customização</h2>
         <div class="conteudo">
             <div class="imagem">
@@ -133,14 +135,55 @@
             </div>
         </div>
     </div>
-    <div class="categorias">
+    <div class="categorias" id="categorias">
         <h2>Categorias</h2>
-        <div class="listaCategorias">
-            <div class="categoria">Categoria 1</div>
-            <div class="categoria">Categoria 2</div>
-            <div class="categoria">Categoria 3</div>
+        <div class="conteudo">
+            <div class="texto">
+                <h2>PRATOS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in</p>
+            </div>
+            <div class="gridCateg">
+                <div class="listaCategorias">
+                    <div class="pratos" id="categ">PRATOS</div>
+                    <div class="bebida" id="categ">BEBIDA</div>
+                    <div class="sobremesa" id="categ">SOBREMESA</div>
+                    <div class="regional" id="categ">REGIONAL</div>
+                    <div class="molhos" id="categ">MOLHOS</div>
+                    <div class="saudavel" id="categ">SAUDÁVEL</div>
+                    <div class="lanche" id="categ">LANCHE</div>
+                    <div class="festas" id="categ">FESTAS</div>
+                </div> 
+            </div>
         </div>
     </div>
+    <footer>
+        <div class="imagensFooter">
+            <img id="comidasFooter" src="./img/inicial/comidasFooter.png" alt="">
+            <img id="fundoAmareloFooter" src="./img/inicial/baixoFundoAmarelo.png" alt="">
+        </div>
+        <div class="conteudo">
+            <div class="sobre">
+                <img src="./img/inicial/iconeImgLogo.png" alt="">
+            </div>
+            <div class="links">
+                <h3>Desenvolvedores</h3>
+                <p>Barbara</p>
+                <p>Rebeca</p>
+            </div>
+            <div class="orientadores">
+                <h3>Orientadores</h3>
+                <p>Everson</p>
+                <p>Thayane</p>
+            </div>
+            <div class="contato">
+                <h3>Contato</h3>
+                <div class="iconesRedes">
+                    <i class="fa-solid fa-facebook"></i>
+                    <i class="fa-solid fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
