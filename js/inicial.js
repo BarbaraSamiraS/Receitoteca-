@@ -3,7 +3,7 @@ var categ = document.querySelectorAll('.listaCategorias #categ');
   
 categ.forEach(box => {    
   box.addEventListener('click', () => {      
-     const texto = box.textContent;      
-     txtCateg.textContent = texto;
-  }
-}
+    const texto = box.textContent.trim();      
+    txtCateg.textContent = texto;
+  });
+});
