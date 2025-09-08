@@ -1,0 +1,58 @@
+
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  margin: 10px 10px;
+  border-radius: 15px;
+  
+  display: grid;
+  grid-template-columns: 18% 85%;
+  position: relative;
+}
+
+.input-field-diferente {
+  display: none;
+}
+
+.input-field p {
+  text-align: center;
+  height: 55px;
+  aspect-ratio: 1/1;
+  color: #ffffff;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-radius: 50%;
+}
+
+.input-field input {
+  margin-top: 13px;
+  background: none;
+  height: 55px;
+  outline: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: #333 1px 2px 4px 0;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+#num1{
+  background-color: #F64343;
+}
+#num2{
+  background-color: #2CB211;
+}
+#num3{
+  background-color: #FFAE00;
+}
