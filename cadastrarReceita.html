@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Receita</title>
+  <link rel="stylesheet" href="./css/receitas/geral.css">
+  <link rel="stylesheet" href="./css/receitas/conteudo.css">
+</head>
+<body>
+  <div class="container">
+    <!--imagem-->
+    <div class="header"></div>
+
+    <!-- Formulário -->
+    <form class="form">
+      <label for="nome">Para começarmos, qual é o nome da sua receita?</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite aqui..." required>
+
+      <label>Quais ingredientes são obrigatórios para sua receita?</label>
+      <div class="input-group">
+        <input type="text" id="ing-obrig" placeholder="Adicionar ingrediente obrigatório">
+        <button type="button" class="btn-add" onclick="addIngrediente('obrig')">ADICIONAR</button>
+      </div>
+      <ul id="lista-obrig" class="list"></ul>
+
+      <label>Quais ingredientes são opcionais para sua receita?</label>
+      <div class="input-group">
+        <input type="text" id="ing-opc" placeholder="Adicionar ingrediente opcional">
+        <button type="button" class="btn-add" onclick="addIngrediente('opc')">ADICIONAR</button>
+      </div>
+      <ul id="lista-opc" class="list"></ul>
+
+      <label for="preparo">Modo de preparo da sua receita:</label>
+      <textarea id="preparo" placeholder="Digite aqui..." rows="4"></textarea>
+
+      <label>Sua receita se encaixa em qual categoria?</label>
+      <div class="categories">
+        <button type="button">PRATOS</button>
+        <button type="button">SOBREMESA</button>
+        <button type="button">BEBIDA</button>
+        <button type="button">LANCHE</button>
+        <button type="button">MOLHOS</button>
+        <button type="button">REGIONAL</button>
+        <button type="button">SAUDÁVEL</button>
+        <button type="button">FESTAS</button>
+      </div>
+
+      <label for="imagem">Insira uma imagem da sua receita (pode ser tirada da internet):</label>
+      <input type="file" id="imagem">
+
+      <label>Agora para finalizar, escolha o design e a cor que preferir:</label>
+      <div class="design">
+        <div class="design-option vermelho">SIMPLES</div>
+        <div class="design-option verde">MÉDIO</div>
+        <div class="design-option amarelo">DETALHADO</div>
+      </div>
+
+      <div class="cores">
+        <input type="radio" name="cor" id="cor-vermelho">
+        <input type="radio" name="cor" id="cor-verde">
+        <input type="radio" name="cor" id="cor-amarelo">
+      </div>
+
+      <button type="submit" class="btn-finalizar">Finalizar</button>
+    </form>
+  </div>
+
+  <script src="./js/cadastrarReceitas.js"> </script>
+</body>
+</html>
