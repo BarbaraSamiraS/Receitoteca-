@@ -1,4 +1,4 @@
-import { textoCateg } from '../json/textoCateg.js';
+import { textoCateg } from '../../json/textoCateg.js';
 
 const pararafoCateg = document.querySelector('.categorias .texto p');
 const txtCateg = document.querySelector('.categorias .texto h2');

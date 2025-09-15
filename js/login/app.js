@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", e => {
       e.preventDefault();
       container.classList.add("sign-up-mode");
-      console.log("Clicou signup");
     });
   });
 
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", e => {
       e.preventDefault();
       container.classList.remove("sign-up-mode");
-      console.log("Clicou signin");
     });
   });
 });
