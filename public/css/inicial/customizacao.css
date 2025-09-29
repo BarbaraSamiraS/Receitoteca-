@@ -1,0 +1,160 @@
+.customizacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.customizacao .conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+.customizacao h2{
+    font-size: 2rem;
+    font-family: 'Jaro', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.customizacao .conteudo .imagem {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.customizacao .conteudo #fundoCozinha {
+    height: 100%;
+    width: auto;
+    margin-right: 30%;
+    position: absolute;
+}
+
+.customizacao .conteudo #imgCartas {
+    height: 100%;
+    position: absolute;
+    width: auto;
+    z-index: 2;
+    height: 80%;
+}
+
+.customizacao .conteudo .caixaBranca {
+    height: 410px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.555);
+    position: relative;
+    opacity: 0.9;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.customizacao .conteudo .caixaBranca::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff99, #ffd3d35d);
+    backdrop-filter: blur(8px);
+    z-index: 0;
+    border-radius: 20px;
+    border: #fff 1px solid;
+}
+
+
+/************** Texto da Customização *****************/
+
+.customizacao .conteudo .texto {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.customizacao .conteudo .texto .box{
+    box-sizing: border-box;
+    border-radius: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.customizacao .conteudo .texto .box .textoBox{
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.customizacao .conteudo .texto .box .numeracao{
+    font-size: 2rem;
+    font-weight: bold;
+    height: 90px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.customizacao .conteudo .texto .box h3 {
+    font-size: 1.5rem;
+    font-family: 'Jaro', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.customizacao .conteudo .texto .box p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#numeracao1{
+    background-color: #F64343;
+}
+
+#numeracao2{
+    background-color: #2CB211;
+}
+
+#numeracao3{
+    background-color: #FFAE00;
+}
+
+
+@media (max-width: 1120px) {
+    .customizacao .conteudo .imagem {
+        width: 45%;
+    }
+    .customizacao .conteudo .texto {
+        width: 40%;
+        margin-left: 10%;
+    }
+    .customizacao .conteudo #fundoCozinha {
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 750px) {
+    .customizacao{
+        height: auto;
+        padding: 20px 0;
+    }
+    .customizacao .conteudo {
+        flex-direction: column;
+    }
+    .customizacao .conteudo .texto {
+        width: 90%;
+        height: auto;
+        gap: 20px;
+        margin-top: 20px;
+         margin-left: 0;
+    }
+}

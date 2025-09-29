@@ -1,0 +1,135 @@
+.categorias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.categorias h2 {
+    font-size: 2rem;
+    font-family: 'Jaro', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.categorias .conteudo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 20px;
+}
+
+.categorias .conteudo .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    height: 100%;
+    gap: 30px;
+}
+.categorias .conteudo .texto h2 {
+    font-size: 20px;
+    background-color: #FFF;
+    color: #FF7A00;
+    padding: 3px 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: #00000070 0 3px 4px;
+    font-family: 'inter', sans-serif;
+}
+
+/************ Grid ************/
+#categ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.pratos{
+    grid-area: pratos;
+    background: linear-gradient(#f64343a8, #f64343a8), url('../../img/inicial/categ/pratos.jpg') no-repeat center;
+    background-size: cover;
+}
+.bebida{
+    grid-area: bebidas;
+    background: linear-gradient(#ffae00ab, #ffae00ab), url('../../img/inicial/categ/bebida.jpg') no-repeat center;
+    background-size: cover;
+}
+.sobremesa{
+    grid-area: sobremesas;
+    background: linear-gradient(#2cb211a2, #2cb211a2), url('../../img/inicial/categ/sobremesa.jpg') no-repeat center;
+    background-size: cover;
+}
+.regional{
+    grid-area: regionais;
+    background: linear-gradient(#f64343a8, #f64343a8), url('../../img/inicial/categ/regional.jpg') no-repeat center;
+    background-size: cover;
+}
+.molhos{
+    grid-area: molhos;
+    background: linear-gradient(#ffae00ab, #ffae00ab), url('../../img/inicial/categ/molhos.jpg') no-repeat center;
+    background-size: cover;
+}
+.saudavel{
+    grid-area: saudaveis;
+    background: linear-gradient(#ffae00ab, #ffae00ab), url('../../img/inicial/categ/saudavel.jpg') no-repeat center;
+    background-size: cover;
+}
+.lanche{
+    grid-area: lanches;
+    background: linear-gradient(#2cb211a2, #2cb211a2), url('../../img/inicial/categ/lanche.jpg') no-repeat center;
+    background-size: cover;
+}
+.festas{
+    grid-area: festas;
+    background: linear-gradient(#f64343a8, #f64343a8), url('../../img/inicial/categ/festas.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.categorias .conteudo .listaCategorias {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    width: 50%;
+    grid-template-areas: 
+        "pratos pratos bebidas bebidas"
+        "sobremesas regionais regionais regionais"
+        "molhos saudaveis lanches lanches"
+        "molhos festas lanches lanches";
+}
+
+@media (max-width: 750px) {
+    .categorias{
+        height: auto;
+        padding: 20px 0;
+    }
+    .categorias .conteudo {
+        flex-direction: column;
+        height: auto;
+    }
+    .categorias .conteudo .texto {
+        width: 86%;
+        height: auto;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .categorias .conteudo .gridCateg {
+        width: 86%;
+        height: 50vh;
+    }
+    .categorias .conteudo .listaCategorias {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+}

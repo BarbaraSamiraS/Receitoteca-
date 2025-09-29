@@ -1,0 +1,190 @@
+.servicos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+#cimaFundoAmarelo {
+    width: 100%;
+}
+
+#baixoFundoAmarelo {
+    width: 100%;
+}
+
+.servicos .conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #FEEB64 13%,#FDD55B 35%, #FDDC5F 46%, #FBCB60 58%, #F7AE67 100%);
+}
+
+.servicos .titulo{
+    position: absolute;
+    font-size: 2.5em;
+    font-family: 'Jaro', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+    font-weight: 200;
+}
+
+.servicos .conteudo .imagem{
+    width: 25%;
+    height: 80%;
+    padding: 20px;
+    background: linear-gradient(180deg, #F27437 0%, #F5AF45 100%);
+    border-radius: 60px;
+    box-shadow: #00000077 1px 3px 4px;
+}
+
+.servicos .conteudo .imagem img{
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+}
+
+.servicos .conteudo .texto{
+    width: 40%;
+    color: #fff;
+    padding: 20px;
+}
+
+.servicos .conteudo .texto h2{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFFBFB;
+    text-shadow: #00000077 1px 3px 4px;
+}
+
+.servicos .conteudo .texto p{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.servicos .conteudo .texto .botoes{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicos .conteudo .texto .botoes button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+    height: 170px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #000000 0px 3px 4px;
+}
+
+.servicos .conteudo .texto .botoes button p{
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.servicos .conteudo .texto .botoes button i{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 25px;
+    box-shadow: #00000077 1px 3px 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.botoes #amarelo{
+    background: linear-gradient(180deg, #FFD103 0%, #F9B201 100%);
+}
+
+.botoes #verde{
+    background: linear-gradient(180deg, #3BD21D 0%, #1A9C00 100%);
+}
+
+.botoes #vermelho{
+    background: linear-gradient(180deg, #F64343 0%, #F91717 100%);
+}
+
+
+
+@media (max-width: 1150px) {
+    .servicos .conteudo .imagem{
+        width: 30%;
+        height: auto;
+    }
+    
+    
+}
+
+@media (max-width: 750px) {
+    .servicos .conteudo{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .servicos .conteudo .imagem{
+        width: 60%;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    .servicos .conteudo .texto{
+        width: 80%;
+        text-align: center;
+    }
+
+    .servicos .titulo{
+        margin-top: 10%;
+        font-size: 2em;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .servicos .conteudo .texto .botoes button{
+        width: 80px;
+        height: 140px;
+        border-radius: 40px;
+    }
+
+    .servicos .conteudo .texto .botoes button i{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .servicos .conteudo .texto .botoes button p{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}

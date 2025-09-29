@@ -1,0 +1,197 @@
+.receitas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../../img/inicial/fundoReceitas.png) no-repeat center center fixed;
+}
+
+.receitas .tranparent{
+    height: 20%;
+    width: 100%;
+    position: absolute;
+}
+
+.receitas #cima{
+    top: 0;
+    background: linear-gradient(180deg, #FFD796, #ffd79600);
+}
+
+.receitas #baixo{
+    bottom: 0;
+    background: linear-gradient(360deg, #FFD796, #ffd79600);
+}
+
+.receitas h2{
+    font-size: 36px;
+    margin: 0 0 60px 0;
+    font-family: 'Jaro', sans-serif;
+    font-weight: 550;
+    z-index: 1;
+}
+
+.receitas .cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    border-radius: 20px;
+    position: relative;
+    background: transparent;
+}   
+
+.receitas .cards .card{
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    width: 250px;
+    height: 350px;
+}
+
+.receitas .cards .card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.receitas .cards .card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff99, #ffd3d35d);
+    backdrop-filter: blur(8px);
+    z-index: 0;
+    border-radius: 20px;
+    border: #fff 1px solid;
+}
+
+
+.receitas .card .imgComida{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -50px;
+    right: 2px;
+    margin: auto;
+}
+
+.receitas .card h3{
+    font-size: 25px;
+    margin: 10px 0;
+    font-family: 'Jaro', sans-serif;
+    font-weight: 600;
+    width: 45%;
+}
+
+.receitas .card .categ{
+    font-size: 14px;
+    background-color: #FFF;
+    color: #FF7A00;
+    padding: 3px 10px;
+    font-weight: bolder;
+    border-radius: 20px;
+    width: fit-content;
+    box-shadow: #00000070 0 3px 4px;
+}
+
+.receitas .card p{
+    font-size: 14px;
+    height: 58%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    line-clamp: 12;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.receitas .card .botoes{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 15px;
+    width: 86%;
+}
+
+.receitas .card .botoes .btnReceita {
+    color: #FFF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 90%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.receitas .card .botoes .btnCoracao {
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 12px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.receitas .card .botoes #btnVermelho{
+    background-color: #F64343;
+}
+
+.receitas .card .botoes #btnVerde{
+    background-color: #2CB211;
+}
+
+.receitas .card .botoes #btnAmarelo{
+    background-color: #FFAE00;
+}
+
+@media (max-width: 970px) {
+    .receitas .card .imgComida {
+        width: 100px;
+        height: 100px;
+        top: -30px;
+    }
+
+    .receitas .card h3 {
+        font-size: 20px;
+    }
+
+    .receitas .card .categ {
+        font-size: 12px;
+    }
+
+    .receitas .card p {
+        font-size: 12px;
+    }
+
+    .receitas .card .botoes .btnReceita {
+        font-size: 16px;
+    }
+
+    .receitas .card .botoes .btnCoracao {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .receitas .cards {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    .receitas .cards .card{
+        height: 250px;
+        width: 90%;
+    }
+    .receitas{
+        height: auto;
+    }
+}

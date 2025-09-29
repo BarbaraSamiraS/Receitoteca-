@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #fcd8a8, #ffbb73);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.receitaSimples {
+  background: #fae8d4;
+  width: 800px;
+  max-width: 95%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.425);
+  color: #333;
+}
+
+.receitaSimples h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #b43f0c;
+  text-align: center;
+}
+
+/* Conteúdo em duas colunas: foto e ingredientes */
+.receitaSimples .conteudo {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Foto menor */
+.receitaSimples img {
+  width: 100%;
+  height: 100%;
+  max-width: 250px; /* diminuiu a largura */
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+/* Ingredientes ao lado da foto */
+.receitaSimples .ingredientes {
+  flex: 1;
+}
+
+/* Títulos das seções */
+.receitaSimples h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #b43f0c;
+  border-bottom: 2px solid #f7b36b;
+  padding-bottom: 4px;
+}
+
+/* Listas de ingredientes */
+.receitaSimples ul {
+  list-style: disc;
+  margin: 10px 0 20px 25px;
+  line-height: 1.6;
+}
+
+/* Modo de preparo embaixo das duas colunas */
+.receitaSimples .preparo {
+  margin-top: 30px;
+  clear: both; /* garante que fique abaixo */
+}
+
+/* Caixa do preparo */
+.receitaSimples .preparo p {
+  background: #d88602;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: azure;
+}
+
+
+   /* Responsivo */
+        @media (max-width: 768px) {
+            .conteudo {
+                flex-direction: column;
+            }
+
+            .receita-img {
+                max-width: 100%;
+            }
+        }

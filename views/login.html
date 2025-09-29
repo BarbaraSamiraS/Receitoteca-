@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/configGlobal.css">
+
+    <link rel="stylesheet" href="/css/login/btns.css" />
+    <link rel="stylesheet" href="/css/login/links.css" />
+    <link rel="stylesheet" href="/css/login/text.css" />
+    <link rel="stylesheet" href="/css/login/inputs.css" />
+    <link rel="stylesheet" href="/css/login/container.css" />
+    <link rel="stylesheet" href="/css/login/panel.css" />
+    <link rel="stylesheet" href="/css/login/medias.css" />
+</head>
+<body>
+    <div class="container">
+        <img id="cimaFundoAmarelo" src="./img/inicial/cimaFundoAmarelo.png" alt="">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="/login" method="post" class="sign-in-form">
+            <h2 class="title">Entrar</h2>
+            <div class="input-field">
+              <p id="num1">1</p>
+              <input type="email" name="email" placeholder="E-mail" />
+            </div>
+            <div class="input-field">
+              <p id="num2">2</p>
+              <input type="password" name="senha"  placeholder="Password" />
+            </div>
+            <button type="submit" class="btn solid">Confirmar</button>
+            <p>
+              Não tem uma conta? <span class="signup-link">Crie uma agora!</span>
+            </p>
+          </form>
+          
+
+          <form action="/cadastrar" method="post" class="sign-up-form">
+            <h2 class="title">Criar Conta</h2>
+            <div class="input-field">
+              <p id="num1">1</p>
+              <input type="text" name="nome" placeholder="Nome" />
+            </div>
+            <div class="input-field">
+              <p id="num2">2</p>
+              <input type="email" name="email" placeholder="E-mail" />
+            </div>
+            <div class="input-field">
+              <p id="num3">3</p>
+              <input type="password" name="senha" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn">Confirmar</button>
+            <p>
+              Já tem uma conta? <span class="signin-link">Entre agora!</span>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <img src="./img/login/imgLoginFundo.png" class="image" id="fundoPrato" alt="" />
+          <img src="./img/login/imgLoginComida.png" class="image" id="prato" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <img src="./img/login/imgLoginFundo.png" class="image" id="fundoPrato" alt="" />
+          <img src="./img/login/imgLoginComida.png" class="image" id="prato" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/login/app.js"></script>
+    <script src="/js/login/login.js"></script>
+</body>
+</html>

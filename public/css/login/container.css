@@ -1,0 +1,93 @@
+html{
+    background: url(../../img/FundoCozinhaColor.png) no-repeat center fixed #FFD796;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .forms-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .signin-signup {
+    position: absolute;
+    
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+  }
+
+  .container:before {
+    content: "";
+    position: absolute;
+    height: 200%;
+    width: 2000px;
+    right: 48%;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, #FEEB64 13%,#FDD55B 35%, #FDDC5F 46%, #FBCB60 58%, #F7AE67 100%);
+    transition: 1.8s ease-in-out;
+    z-index: 6;
+  }
+
+  /* Imagens Barras Amarelas */
+ .container #cimaFundoAmarelo{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    /*background: url(../../img/BarraAmarelaCima.png) no-repeat center fixed;*/
+    z-index: 9;
+    transform: rotateX(90deg);
+
+}
+  /* ANIMATION */
+
+.container.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+  }
+  
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateX(-800px);
+  }
+  
+  .container.sign-up-mode .signin-signup {
+    left: 25%;
+  }
+  
+  .container.sign-up-mode form.sign-up-form {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .container.sign-up-mode form.sign-in-form {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
+    transform: translateX(0%);
+  }
+  
+  .container.sign-up-mode .left-panel {
+    pointer-events: none;
+  }
+  
+  .container.sign-up-mode .right-panel {
+    pointer-events: all;
+  }
