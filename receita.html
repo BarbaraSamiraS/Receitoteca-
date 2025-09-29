@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Receita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const receita = JSON.parse(localStorage.getItem("receitaCadastrada"));
+        const container = document.getElementById("container");
+
+        if (!receita) {
+            container.innerHTML = `<p style="color:red; text-align:center;">Nenhuma receita encontrada. Volte e cadastre uma.</p>`;
+        } else {
+            // Determinar classe e caminho do CSS
+            let classeDesign, cssPath;
+            switch ((receita.design || "").toUpperCase()) {
+                case "MEDIO":
+                    classeDesign = "receitaMedio";
+                    cssPath = "./css/receitas/receitasDesing/medio.css";
+                    break;
+                case "DETALHADO":
+                    classeDesign = "receitaDetalhado";
+                    cssPath = "./css/receitas/receitasDesing/detalhado.css";
+                    break;
+                default:
+                    classeDesign = "receitaSimples";
+                    cssPath = "./css/receitas/receitasDesing/simples.css";
+            }
+
+            // Remover CSS anterior de design, se existir
+            document.querySelectorAll('link[data-design-css]').forEach(link => link.remove());
+
+            // Adicionar novo CSS dinâmico
+            const head = document.querySelector("head");
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = cssPath;
+            link.dataset.designCss = "true"; // marca para remover depois
+            head.appendChild(link);
+
+            // Montar HTML da receita
+            container.innerHTML = `
+                <div class="${classeDesign} ${receita.cor || ''}">
+                    <h1>${receita.nome}</h1>
+                    <div class="conteudo">
+                        ${receita.imagem ? `<img class="receita-img" src="${receita.imagem}" alt="Imagem da receita">` : ""}
+                        <div class="ingredientes">
+                            <h3>Ingredientes obrigatórios:</h3>
+                            <ul>
+                                ${receita.obrigatorios?.length > 0
+                                    ? receita.obrigatorios.map(i => `<li>${i}</li>`).join("")
+                                    : "<li>Nenhum ingrediente obrigatório</li>"}
+                            </ul>
+                            <h3>Ingredientes opcionais:</h3>
+                            <ul>
+                                ${receita.opcionais?.length > 0
+                                    ? receita.opcionais.map(i => `<li>${i}</li>`).join("")
+                                    : "<li>Nenhum ingrediente opcional</li>"}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="preparo">
+                        <h3>Modo de Preparo:</h3>
+                        <p>${receita.preparo || "Nenhum modo de preparo cadastrado"}</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+
+    
+</body>
+</html>
